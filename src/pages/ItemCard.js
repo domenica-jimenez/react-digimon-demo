@@ -90,7 +90,7 @@ export function ItemCard() {
                         }
                 </div>
             </div>
-            <div class="flex space-x-4 justify-center">
+            <div className="flex space-x-4 justify-center">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm rounded mt-4 py-2 px-4" onClick={handleBackHome}>Home</button>
             </div>
         </div>

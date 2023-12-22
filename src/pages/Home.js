@@ -45,7 +45,7 @@ export function Home() {
 
     useEffect(() => {
         handleDigimons();
-    }, [,actualPage]);
+    }, [[],actualPage]);
 
     if (loading) return <div>Loading...</div>
        
@@ -76,7 +76,7 @@ export function Home() {
                 ))}
             </div>
         </div>
-        <div class="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center">
                 <button className="bg-slate-100 hover:bg-slate-300 rounded py-2 px-4 text-black" onClick={handlePreview}>&lt;</button>
                 <button className="bg-slate-100 hover:bg-slate-300 rounded py-2 px-4 text-black" onClick={handleNext}>&gt;</button>
         </div>
