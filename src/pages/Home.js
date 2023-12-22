@@ -15,6 +15,7 @@ export function Home() {
     const [actualPage, setActualPage] = useState(0);
     const [maxPages, setMaxPages] = useState(0);
 
+    // handleLogout, call logout from Firebase.
     const handleLogout = async() => {
         setError('');
         try {
@@ -24,6 +25,7 @@ export function Home() {
         }
     } 
 
+    // handleDigimons, call api getDigimonList to get all digimons.
     const handleDigimons = async() => {
         setError('');
         try {
@@ -35,10 +37,12 @@ export function Home() {
         }
     } 
 
+    // handleNext, change actualPage variable.
     const handleNext = () => {
         if (actualPage!==maxPages) setActualPage(actualPage+1);
     } 
 
+    // handlePreview, change actualPage variable.
     const handlePreview = () => {
         if (actualPage!==0) setActualPage(actualPage-1);
     } 

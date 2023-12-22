@@ -10,9 +10,11 @@ export function RecoverPassword() {
     const { recoverPassword } = useAuth();
     const navigate = useNavigate();
 
+    // handleChange, save the information on email variable.
     const handleChange = ({ target: { value } }) =>
         setEmain(value);
 
+    // handleSubmit, call recoverPassword from Firebase.
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');

@@ -4,6 +4,7 @@ import logo from "../img/logo.png"
 export function Notify() {
     const navigate = useNavigate();
 
+    // handleLogin, redirect to /login.
     const handleLogin = async (e) => {
         navigate('/login');
     }

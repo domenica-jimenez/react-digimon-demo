@@ -10,6 +10,7 @@ export function ItemCard() {
     const { id } = useParams();
     const navigate = useNavigate();
 
+    // handleDigimon, call api getDigimon to get one digimon.
     const handleDigimon = async() => {
         setError('');
         try {
@@ -20,6 +21,7 @@ export function ItemCard() {
         }
     } 
 
+    // handleBackHome, redirect to /.
     const handleBackHome = () => {
         navigate("/");
     }

@@ -15,9 +15,11 @@ export function Login() {
     const { login, logout } = useAuth();
     const navigate = useNavigate();
 
+    // handleChange, set the information of user when it changes.
     const handleChange = ({ target: { name, value } }) =>
         setUser({ ...user, [name]: value });
 
+    // handleSubmit, call login from Firebase.
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');

@@ -14,9 +14,11 @@ export function Signup() {
     const { signup, verifiedEmail } = useAuth();
     const navigate = useNavigate();
 
+    // handleChange, set the information of user when it changes.
     const handleChange = ({ target: { name, value } }) =>
         setUser({ ...userAuth, [name]: value });
 
+    // handleSubmit, call signup from Firebase.
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
