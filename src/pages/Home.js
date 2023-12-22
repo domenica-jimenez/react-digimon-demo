@@ -44,8 +44,18 @@ export function Home() {
     } 
 
     useEffect(() => {
+        setError('');
+        getDigimonList(pageSize, actualPage).then(({content, pageable}) => {
+            setDigiomList(content ?? []);
+            setMaxPages(pageable.totalPages ?? 0);
+        }).catch(error => {
+            setError(error.code);
+        });
+    }, []);
+
+    useEffect(() => {
         handleDigimons();
-    }, [[],actualPage]);
+    }, [actualPage]);
 
     if (loading) return <div>Loading...</div>
        
